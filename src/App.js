@@ -278,7 +278,7 @@ class App extends Component {
       <Container id="page-container" fluid={true}>
         <Row id="header" className="text-light">
           <Col xs="auto">
-            <Image src="/apple-touch-icon.png" width="30rem" className="m-2"></Image>
+            <Image src="/IfcXplorer/apple-touch-icon.png" width="30rem" className="m-2"></Image>
             <span id="logo" className="text-light">
               IFCXplorer
             </span>

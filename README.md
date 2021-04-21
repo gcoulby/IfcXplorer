@@ -6,13 +6,39 @@ I made this program when I was working as a research assistant, working predomin
 
 Software such as Xbim and Solibri make it easier to view the Geometry, but there are times when you need to navigate the STEP21 files. To an extent Notepad++ makes this job easier. However, to read IFCZip files you have to first convert the file to .zip, then extract the IFC and open it in Notepad++. The primary purpose of this program is to make it easier to read IFCZips and it directly opens up the bytestream.
 
+
+
+## Using the Application via GitHub
+
+This application is available without local installation. To access the application go to:
+
+ [https://gcoulby.github.io/IfcXplorer](https://gcoulby.github.io/IfcXplorer)
+
+
+
+## Installation
+
+To install this app locally, ensure you have Node.js installed and then clone the application.
+
+Run 
+
+```
+npm start
+```
+
+the app will  then run on a local server: [http://localhost:3000/](http://localhost:3000/)
+
+
+
 ## Features
 
 This app is built using Monaco Text Editor. This is the same editor used by visual studio code and has many of the same features 
 
 ### IFCZIP Reading
 
-Opening IFC zip files in VSCode is not possible without decompressing the file first and opening the contained IFC. This app decompresses the file and pulls the IFC out of the archive and presents the text in the same way as opening a normal IFC. hen 
+Opening IFCZip files in VSCode is not possible without decompressing the file first and opening the contained IFC. This app decompresses the file and pulls the IFC out of the archive and presents the text in the same way as opening a normal IFC. When opening an IFCZip file the footer will display both the file size of the zip file and the uncompressed size:
+
+![https://i.imgur.com/h76LTry.png](https://i.imgur.com/h76LTry.png)
 
 ### Search
 
