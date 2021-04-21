@@ -1,0 +1,66 @@
+html,
+body,
+#root,
+#page-container {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  display: flex;
+  flex-direction: column;
+}
+#header {
+  font-family: "Prosto One";
+  background: #252525 !important;
+  height: 3rem;
+}
+
+.input-group-text {
+  background: $secondary;
+  border: none;
+  color: white;
+}
+main {
+  flex: auto;
+  height: 50vh;
+}
+
+#footer {
+  background: $primary;
+  height: 1.5rem;
+  color: white;
+  font-size: 10pt;
+}
+
+.mtk19 {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.mtk19:hover {
+  color: white;
+  background: #793c61;
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  // border: 1px solid #ccc;
+  display: inline-block;
+  // padding: 6px 12px;
+  cursor: pointer;
+}
+
+#logo {
+  font-family: "Zen Dots";
+  line-height: 2rem;
+}

@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Prosto+One&family=Zen+Dots&display=swap");
+html,
+body,
+#root,
+#page-container {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#header {
+  font-family: "Prosto One";
+  background: #252525 !important;
+  height: 3rem;
+}
+
+.input-group-text {
+  background: #6c757d;
+  border: none;
+  color: white;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  height: 50vh;
+}
+
+#footer {
+  background: #007bff;
+  height: 1.5rem;
+  color: white;
+  font-size: 10pt;
+}
+
+.mtk19 {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.mtk19:hover {
+  color: white;
+  background: #793c61;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#logo {
+  font-family: "Zen Dots";
+  line-height: 2rem;
+}
+/*# sourceMappingURL=main.css.map */

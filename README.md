@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# IfcXplorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A text reader specifically designed for reading Industry Foundation Class (IFC) files.
 
-## Available Scripts
+I made this program when I was working as a research assistant, working predominantly with IFC files.
 
-In the project directory, you can run:
+Software such as Xbim and Solibri make it easier to view the Geometry, but there are times when you need to navigate the STEP21 files. To an extent Notepad++ makes this job easier. However, to read IFCZip files you have to first convert the file to .zip, then extract the IFC and open it in Notepad++. The primary purpose of this program is to make it easier to read IFCZips and it directly opens up the bytestream.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This app is built using Monaco Text Editor. This is the same editor used by visual studio code and has many of the same features 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### IFCZIP Reading
 
-### `npm test`
+Opening IFC zip files in VSCode is not possible without decompressing the file first and opening the contained IFC. This app decompresses the file and pulls the IFC out of the archive and presents the text in the same way as opening a normal IFC. hen 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Search
 
-### `npm run build`
+This uses the same search as seen in VSCode, which supports Case Match, Word Match and Regex.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![https://i.imgur.com/rWbz01Q.png](https://i.imgur.com/rWbz01Q.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Reference Peek on Hover
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+One of the key features of this application is the Peek-on-Hover functionality. Since Step21 files work by cross referencing Entities using hashtags, this makes it very difficult to read the files. Hovering over a has tag in this application will display a popup that shows the line being referenced. 
 
-### `npm run eject`
+![https://i.imgur.com/OkYU3UI.png](https://i.imgur.com/OkYU3UI.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Goto / Peek Definition
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+There are various controls to goto/peek a definition (which are linked to hashtags).
 
-## Learn More
+| Command                                           | Action           |
+| ------------------------------------------------- | ---------------- |
+| CTRL + F12  - or - Right Click > Go to Definition | Go to Definition |
+| ALT + F12 - or - Right click > Peek Definition    | Peek Definition  |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Go to definition will move the caret to the the entity definition. However, the peek definition from VSCode adds additional value in this application. Peeking the definition on an Entity label reference will show a syntax-highlighted peek at the referenced line for reference. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![https://i.imgur.com/zvktroW.png](https://i.imgur.com/zvktroW.png)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### Schema Referencing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Another notable feature of this application is the Schema Referencing. This app will detect the Schema when the file is open from the data within the header rows. If the Schema is either: IFC2x3, IFC4 or IFC4X1, the app will provide additional context when hovering over Entity labels. A pop-up will be displayed above Entity labels that shows the Entity label, the schema version and a URL to the schema definition. 
 
-### Making a Progressive Web App
+![https://i.imgur.com/BhmBrK7.png](https://i.imgur.com/BhmBrK7.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
